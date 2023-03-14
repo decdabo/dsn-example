@@ -37,7 +37,12 @@ module.exports = {
       patterns: [
         { from: './frontend/assets', to: './assets' }
       ]
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: './frontend/php', to: './php' }
+      ]
+    }),
   ],
   devtool: 'source-map',
   mode: devEnviroment ? 'development' : 'production'
